@@ -1,0 +1,26 @@
+<!-- filter the ele who % 2 and then add that numbers only -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr = [1,2,3,4,5];
+
+    let div2 = arr.filter((arr) =>
+    arr % 2 == 0);
+
+    console.log(div2);
+
+    let sum = div2.reduce((a, b) => a + b);
+    
+    console.log(sum);
+    
+</script>
+</html>

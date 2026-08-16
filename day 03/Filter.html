@@ -1,0 +1,29 @@
+<!-- filter the vlaue which is greater than 50 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Filter</h1>
+</body>
+<script>
+    let students = [
+        { name: "A", marks: 80 },
+        { name: "B", marks: 40 },
+        { name: "C", marks: 90 },
+        { name: "D", marks: 70 },
+        { name: "E", marks: 50 },
+        { name: "F", marks: 76 },
+        { name: "G", marks: 30 },
+    ];
+
+    let result = students.filter((students) =>
+    students.marks > 50);
+    
+    console.log(result);
+</script>
+</html>
