@@ -12,7 +12,7 @@ const nav = `
 `;
 
 const server = http.createServer((req, res) => {
-    console.log('Request received for:', req.url); // helps debug routing
+    console.log('Request received for:', req.url); 
 
     res.writeHead(200, { 'Content-Type': 'text/html' });
 
