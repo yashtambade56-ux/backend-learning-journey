@@ -3,15 +3,9 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
-
-
 // ASSIGNMENT 1
 
-
 const router = express.Router();
-
-
-// Router-Level Logger Middleware
 
 function routerLogger(req, res, next) {
 
@@ -27,13 +21,7 @@ function routerLogger(req, res, next) {
     next();
 }
 
-
-// Apply middleware only to router
-
 router.use(routerLogger);
-
-
-// Assignment 1 Routes
 
 router.get("/students", (req, res) => {
     res.send("Students List");
@@ -49,20 +37,12 @@ router.get("/faculty", (req, res) => {
     res.send("Faculty List");
 });
 
-
-// Mount router
-
 app.use("/api", router);
 
 
+// ASSIGNMENT 2
 
-
-// ==========================================
-// ASSIGNMENT 2: REQUEST LOGGER MIDDLEWARE
-// ==========================================
-
-
-// Custom Logger Middleware
+Custom Logger Middleware
 
 function logger(req, res, next) {
 
@@ -78,13 +58,7 @@ function logger(req, res, next) {
     next();
 }
 
-
-// Apply only to Assignment 2 routes
-
 app.use("/assignment2", logger);
-
-
-// Assignment 2 Routes
 
 app.get("/assignment2", (req, res) => {
     res.send("Welcome to Home Page");
@@ -101,14 +75,7 @@ app.get("/assignment2/contact", (req, res) => {
 });
 
 
-
-
-// ==========================================
-// ASSIGNMENT 3: RESPONSE TIME MIDDLEWARE
-// ==========================================
-
-
-// Response Time Middleware
+// ASSIGNMENT 3
 
 function responseTimeLogger(req, res, next) {
 
@@ -130,14 +97,7 @@ function responseTimeLogger(req, res, next) {
 
     next();
 }
-
-
-// Apply only to Assignment 3 routes
-
 app.use("/assignment3", responseTimeLogger);
-
-
-// Assignment 3 Routes
 
 app.get("/assignment3", (req, res) => {
     res.send("Home Page");
@@ -153,12 +113,6 @@ app.get("/assignment3/users", (req, res) => {
     res.send("User List");
 });
 
-
-
-
-// ==========================================
-// START SERVER
-// ==========================================
 
 app.listen(PORT, () => {
 
